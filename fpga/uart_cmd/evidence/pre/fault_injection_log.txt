@@ -1,0 +1,3 @@
+FATAL: sim/tb.sv:43: cmd=32 led=1 expected=0
+       Time: 9970000  Scope: tb
+exit=1

@@ -1,0 +1,3 @@
+FATAL: sim/tb.sv:43: conflict
+       Time: 164000  Scope: tb
+exit=1

@@ -1,0 +1,12 @@
+{
+  "status": "SIMULATED",
+  "run": "run-1bbdb5e48d714b38aa3a278ae6e8c511",
+  "functional_correctness": "NOT_ASSESSED",
+  "inputs_sha256": {
+    "simulation.json": "b3ccd33a41a0e109723080bebd3a5084f70cd4b1bc1544d1eead095739d0d5e8",
+    "src/sram.v": "7a4fe5a89e8e191a863c0af1ab890b8d88caba756236a873cf60f5082acca55d",
+    "src/sram_bus_control.v": "e0c8c59b77afa7ccf984655c591101436b445c3c27a138ea2777107d2d5d0c0c",
+    "sim/tb.sv": "d503bdf5d6e5bcb996fbea8f8c1c8a899c2f5f886b8146aec23f0853eb7cb483"
+  },
+  "wave_sha256": "a2eca23a38eaa120b35af612bcdf4e76710b96879f17e19696e1c554d862bfbd"
+}

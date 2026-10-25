@@ -1,0 +1,8 @@
+{
+  "sources": [
+    "src/uart.v",
+    "src/uart_cmd.v"
+  ],
+  "testbench": "sim/tb.sv",
+  "simulation_top": "tb"
+}

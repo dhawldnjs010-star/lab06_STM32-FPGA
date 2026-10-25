@@ -15,6 +15,14 @@
 // static uint8_t uart2_rx_ece2;
 // static uint8_t uart3_rx_ece2;
 
+/* lab06 · STM32_2 과제 선택: 5, 6, 7 중 하나로 바꾸고 다시 빌드한다.
+ * 5: PC에서 받은 문자와 바이트 값(16진수)을 VCP(UART2)로 출력
+ * 6: PC에서 받은 한 바이트를 UART3(PC10 TX)로 FPGA에 보내고 송신 결과를 출력
+ * 7: 6과 같이 보내고 보낸 문자·바이트 값·결과를 출력. 명령 0/1/2 해석은 FPGA가 한다
+ * 세 과제 모두 ece2_474_init()은 비워 두고(UART 인터럽트 수신 안 함) polling_routine()만 쓴다.
+ */
+#define STM32_2_TASK      5
+
 /* 주변장치 초기화가 끝난 뒤, 메인 루프에 들어가기 전에 한 번 호출됩니다. */
 void ece2_474_init(void)
 {
@@ -51,7 +59,34 @@ void ece2_474_init(void)
 /* 메인 루프에서 반복해서 호출됩니다. */
 void polling_routine(void)
 {
-    /* 실습 코드 작성 */
+#if STM32_2_TASK == 5
+    int ch = getchar();                 /* 입력이 올 때까지 기다린다. EOF도 담도록 int */
+    if (ch != EOF)
+    {
+        printf("받은 문자: %c, 바이트 값: 0x%02X\r\n", ch, (unsigned int)ch);
+    }
+#elif STM32_2_TASK == 6
+    int ch = getchar();
+    if (ch != EOF)
+    {
+        uint8_t data = (uint8_t)ch;
+        HAL_StatusTypeDef result =
+            HAL_UART_Transmit(&huart3, &data, 1U, 100U);   /* PC10 TX, 최대 100 ms 대기 */
+        printf("전송 결과: %d\r\n", (int)result);         /* 0 = HAL_OK */
+    }
+#elif STM32_2_TASK == 7
+    int ch = getchar();
+    if (ch != EOF)
+    {
+        uint8_t data = (uint8_t)ch;
+        HAL_StatusTypeDef result =
+            HAL_UART_Transmit(&huart3, &data, 1U, 100U);
+        printf("보낸 문자: %c (0x%02X), 전송 결과: %d\r\n",
+               ch, (unsigned int)ch, (int)result);
+    }
+#else
+#error "STM32_2_TASK는 5, 6, 7 중 하나"
+#endif
 }
 
 /* 1. 사용자 버튼 PC13을 눌렀을 때 호출됩니다. 우선순위: 7.

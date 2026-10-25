@@ -1,0 +1,3 @@
+FATAL: sim/tb.sv:37: left limit
+       Time: 20160000  Scope: tb
+exit=1

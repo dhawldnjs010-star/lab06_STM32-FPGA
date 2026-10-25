@@ -1,0 +1,4 @@
+uart_cmd: top uart_cmd, port bits 5, pins 5, mismatch [], duplicate []
+servo: top servo_board, port bits 13, pins 13, mismatch [], duplicate []
+sram: top sram, port bits 55, pins 55, mismatch [], duplicate []
+dac: top dac, port bits 23, pins 23, mismatch [], duplicate []

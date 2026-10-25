@@ -1,0 +1,3 @@
+VCD info: dumpfile wave.vcd opened for output.
+PASS uart_cmd: echo 7 bytes, LED 0/1/2 commands, other byte hold, reset
+sim/tb.sv:49: $finish called at 23191000 (1ps)
