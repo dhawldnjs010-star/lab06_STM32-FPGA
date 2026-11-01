@@ -10,3 +10,7 @@
 | sim/board_tb.sv | 학생 작성 보조 TB: 떨리는 버튼 한 번 = 한 단계, 제한, LED |
 | constraints/pins.xdc | SERVO_CTRL AA22, SW_1 왼쪽(-0.1 ms), SW_2 오른쪽(+0.1 ms), SW_# 리셋, LED 8개 |
 | evidence/pre/ | PASS 로그, 파형, 보조 TB 로그, 오류 주입(0.2 ms씩 줄이면 FATAL) |
+
+## 실험 후 (2026-10-26)
+
+시연 영상과 실측은 `evidence/post/`, `reports/post.md`.

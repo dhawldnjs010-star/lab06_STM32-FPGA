@@ -9,3 +9,7 @@
 | sim/tb.sv | 수업 제공 TB (UPDATE_CYCLES=4), 파형 저장 두 줄 추가 |
 | constraints/pins.xdc | DAC_A_B G2, CSN E1, LDACN F4, WRN G4, D0~D7, DIP_SW1 채널, SW_1 리셋, LED 8개 |
 | evidence/pre/ | PASS 로그, 파형, 오류 주입(펄스 끝에 데이터를 바꾸면 FATAL) |
+
+## 실험 후 (2026-10-26)
+
+시연 영상과 실측은 `evidence/post/`, `reports/post.md`.

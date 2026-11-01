@@ -18,3 +18,7 @@ Vivado: Tcl Console에서 `set ex servo` 후 `source .../fpga/vivado_setup.tcl`,
 
 핀 출처: 예전교안모음의 `Xilinx S7 Pin Map.pdf`(SERVO_CTRL, SRAM, DA Converter, 확장 커넥터 EX2), `HBE Combo II-DLD.pdf`(DIP), 조교 LAB3 `lab3_uart_echo.xdc`.
 보드에서 확인할 가정: EX2 5번 핀(G10)이 3.3 V 뱅크인지, DIP을 올리면 1인지, DAC 전압계가 A 채널(add_sel = 0)을 보이는지.
+
+## 실험 후 (2026-10-26)
+
+각 폴더의 `evidence/post/`에 XSim 화면, 실행 결과, 시연 영상·프레임, `reports/post.md`에 실측 표가 있다. uart_cmd의 RX 핀은 신호등 모듈과 겹치지 않게 브레드보드 I/O F8로 바꿨다.

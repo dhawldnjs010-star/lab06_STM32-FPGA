@@ -9,3 +9,7 @@
 | sim/tb.sv | 수업 제공 TB (SRAM 모델 포함), 파형 저장 두 줄 추가 |
 | constraints/pins.xdc | SRAM_CSN N20, OEN L21, WEN U17, A[17:0], D[15:0], DIP_SW1~4 주소, DIP_SW5~8 값, SW_1 쓰기, SW_2 읽기 |
 | evidence/pre/ | PASS 로그, 파형, 오류 주입(동시 요청에도 구동하면 FATAL) |
+
+## 실험 후 (2026-10-26)
+
+시연 영상과 실측은 `evidence/post/`, `reports/post.md`.
